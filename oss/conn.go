@@ -332,7 +332,7 @@ func (um urlMaker) getResource(bucketName, objectName, subResource string) strin
 	if subResource != "" {
 		subResource = "?" + subResource
 	}
-	if bucketName == "" {
+	if objectName == "" {
 		return fmt.Sprintf("/%s%s", bucketName, subResource)
 	}
 	return fmt.Sprintf("/%s/%s%s", bucketName, objectName, subResource)
